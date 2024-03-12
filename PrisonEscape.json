@@ -117,6 +117,15 @@
         "name": "assets\\guard.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/thearmy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\thearmy.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -155,7 +164,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.9991260522560024,
+        "zoomFactor": 0.8188454456336312,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -170,13 +179,13 @@
           "folded": true,
           "name": "CooldownTimeMinimum",
           "type": "number",
-          "value": 1
+          "value": 0
         },
         {
           "folded": true,
           "name": "CooldownTimeMaximum",
           "type": "number",
-          "value": 4
+          "value": 0.5
         },
         {
           "folded": true,
@@ -201,6 +210,12 @@
           "name": "Lives",
           "type": "number",
           "value": 4
+        },
+        {
+          "folded": true,
+          "name": "ArmySpeed",
+          "type": "string",
+          "value": "30"
         }
       ],
       "instances": [
@@ -290,7 +305,7 @@
           "width": 0,
           "x": 384,
           "y": 592,
-          "zOrder": 5,
+          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -331,13 +346,44 @@
           "customSize": true,
           "depth": 1,
           "height": 32,
-          "layer": "Entities",
+          "layer": "",
           "name": "LevelEnd",
           "persistentUuid": "9735624f-e1a5-4cb4-8463-59ea213dac1e",
           "width": 800,
           "x": 0,
           "y": 0,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Army",
+          "name": "TheArmy",
+          "persistentUuid": "8be10b94-9d38-406b-95ec-57b9ea1e1069",
+          "width": 0,
+          "x": 0,
+          "y": 640,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "layer": "",
+          "name": "PauseTime",
+          "persistentUuid": "1399804b-201d-4be7-b653-689bb52f413c",
+          "width": 96,
+          "x": 352,
+          "y": 256,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -426,7 +472,7 @@
               "folded": true,
               "name": "Speed",
               "type": "number",
-              "value": 40
+              "value": 80
             }
           ],
           "effects": [],
@@ -674,6 +720,107 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "TheArmy",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\thearmy.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 2
+                          },
+                          {
+                            "x": 800,
+                            "y": 2
+                          },
+                          {
+                            "x": 800,
+                            "y": 600
+                          },
+                          {
+                            "x": 0,
+                            "y": 600
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "PauseTime",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "",
+            "textAlignment": "center",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -692,30 +839,20 @@
             "objectName": "Player"
           },
           {
+            "objectName": "TheArmy"
+          },
+          {
             "objectName": "GroundPart2"
           },
           {
             "objectName": "Guard"
+          },
+          {
+            "objectName": "PauseTime"
           }
         ]
       },
       "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreX"
-              },
-              "parameters": [
-                "Guard",
-                "+",
-                "Guard.Direction * Guard.Speed * GlobalVariable(BaseSpeed) * TimeDelta()"
-              ]
-            }
-          ]
-        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -738,33 +875,6 @@
                 "\"PauseTime\""
               ]
             },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "Paused",
-                "True"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"PauseTime\"",
-                ">=",
-                "5"
-              ]
-            }
-          ],
-          "actions": [
             {
               "type": {
                 "value": "ResetTimer"
@@ -793,6 +903,15 @@
                 "=",
                 "RandomFloatInRange(Variable(CooldownTimeMinimum), Variable(CooldownTimeMaximum))"
               ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Paused",
+                "True"
+              ]
             }
           ]
         },
@@ -801,11 +920,12 @@
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::CompareNumbers"
+                "value": "CompareTimer"
               },
               "parameters": [
-                "TimerElapsedTime(\"SpawnTimer\")",
-                ">",
+                "",
+                "\"SpawnTimer\"",
+                ">=",
                 "Variable(CooldownTime)"
               ]
             }
@@ -935,120 +1055,208 @@
           ]
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "movement",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "Player",
-                    "=",
-                    "max(0, Player.X() - TimeDelta() * Player.Speed)"
-                  ]
-                }
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"PauseTime\"",
+                ">=",
+                "5"
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Right"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "Player",
-                    "=",
-                    "min(768, Player.X() + TimeDelta() * Player.Speed)"
-                  ]
-                }
-              ]
-            },
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Up"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreY"
-                  },
-                  "parameters": [
-                    "Player",
-                    "=",
-                    "max(0, Player.Y() - TimeDelta() * Player.Speed)"
-                  ]
-                }
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Paused",
+                "False"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Down"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreY"
-                  },
-                  "parameters": [
-                    "Player",
-                    "=",
-                    "min(608, Player.Y() + TimeDelta() * Player.Speed)"
-                  ]
-                }
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Guard",
+                "+",
+                "Guard.Direction * Guard.Speed * GlobalVariable(BaseSpeed) * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Paused",
+                ""
               ]
             }
           ],
-          "parameters": []
+          "actions": [
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TheArmy",
+                "-",
+                "Variable(ArmySpeed) * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "PauseTime",
+                "Text",
+                "=",
+                "\"\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "movement",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "max(0, Player.X() - TimeDelta() * Player.Speed)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Right"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "min(768, Player.X() + TimeDelta() * Player.Speed)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Up"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "max(0, Player.Y() - TimeDelta() * Player.Speed)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Down"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "min(608, Player.Y() + TimeDelta() * Player.Speed)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -1062,6 +1270,12 @@
                 "<=",
                 "8"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -1073,6 +1287,46 @@
                 "LevelNumber",
                 "+",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TheArmy",
+                "=",
+                "640"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "384",
+                "=",
+                "592"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Paused",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"PauseTime\""
               ]
             }
           ],
@@ -1096,14 +1350,34 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Player",
-                "Guard",
-                "",
-                "",
-                ""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Guard",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "TheArmy",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -1146,6 +1420,16 @@
                 "Lives",
                 "-",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TheArmy",
+                "=",
+                "640"
               ]
             }
           ],
@@ -1197,6 +1481,45 @@
                 "textR": 0
               },
               "comment": "game over"
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "TODO:\nLives Counter"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Paused",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "PauseTime",
+                "Text",
+                "=",
+                "ToString(roundTo(5.0 - TimerElapsedTime(\"PauseTime\"), 1))"
+              ]
             }
           ]
         }
@@ -1278,6 +1601,72 @@
               "booleanParameters": {}
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Army",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
@@ -1304,6 +1693,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
