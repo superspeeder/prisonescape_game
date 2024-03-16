@@ -16,7 +16,7 @@
     "pixelsRounding": true,
     "projectUuid": "74b1450a-86e6-4e78-8db8-2cdc0f53fcb6",
     "scaleMode": "nearest",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
@@ -620,6 +620,15 @@
         "name": "assets\\health_bar_back.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite.png\"}",
+        "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -658,7 +667,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.4389772133866707,
+        "zoomFactor": 0.607539360311675,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1071,12 +1080,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
-          "height": 590,
+          "depth": 1,
+          "height": 577,
           "layer": "Cover",
           "name": "NewSprite4",
           "persistentUuid": "8a7ca27f-3c81-40c1-88df-056d9b3f3e5f",
-          "width": 800,
+          "width": 802,
           "x": 0,
           "y": 0,
           "zOrder": 30,
@@ -4472,6 +4481,22 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ArmySpeed",
+                "=",
+                "Variable(LevelNumber)*3 + 3"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -4503,17 +4528,13 @@
           ],
           "effects": [
             {
-              "effectType": "Scene3D::HemisphereLight",
+              "effectType": "Scene3D::AmbientLight",
               "name": "3D Light",
               "doubleParameters": {
-                "elevation": 45,
-                "intensity": 1,
-                "rotation": 0
+                "intensity": 100
               },
               "stringParameters": {
-                "groundColor": "64;64;64",
-                "skyColor": "255;255;255",
-                "top": "Y-"
+                "color": "255;255;255"
               },
               "booleanParameters": {}
             }
@@ -4773,7 +4794,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9547103308103134,
+        "zoomFactor": 0.7569204152249185,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4839,6 +4860,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 640,
+          "layer": "Bars",
+          "name": "NewSprite",
+          "persistentUuid": "3e48c4c4-ee06-47ec-86f0-f595f9b233f0",
+          "width": 794,
+          "x": 4,
+          "y": -1,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -4868,7 +4905,7 @@
             "isShadowEnabled": false,
             "italic": false,
             "outlineColor": "0;0;0",
-            "outlineThickness": 2,
+            "outlineThickness": 5,
             "shadowAngle": 90,
             "shadowBlurRadius": 2,
             "shadowColor": "0;0;0",
@@ -5131,6 +5168,67 @@
               "width": 192
             }
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 0
+                          },
+                          {
+                            "x": 30,
+                            "y": 0
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 2,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -5147,6 +5245,9 @@
           },
           {
             "objectName": "QuitButton"
+          },
+          {
+            "objectName": "NewSprite"
           }
         ]
       },
@@ -5267,6 +5368,39 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
+          "name": "Bars",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
           "name": "",
           "renderingType": "",
           "visibility": true,
@@ -5302,6 +5436,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
         {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
