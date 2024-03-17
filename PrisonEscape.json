@@ -685,7 +685,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.607539360311675,
+        "zoomFactor": 0.9350055057185577,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1023,13 +1023,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 46,
+          "height": 75,
           "layer": "UIOver",
           "name": "NewText3",
           "persistentUuid": "e05a630c-913f-4eb0-bdfc-b38095a397f9",
           "width": 276,
-          "x": 372,
-          "y": 416,
+          "x": 371,
+          "y": 335,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -1123,6 +1123,66 @@
           "x": 32,
           "y": 12,
           "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UIOver",
+          "name": "NewSprite5",
+          "persistentUuid": "69dcd436-0483-4e3e-b8bb-909ba7ac4e59",
+          "width": 0,
+          "x": 405,
+          "y": 503,
+          "zOrder": 32,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UIOver",
+          "name": "NewText4",
+          "persistentUuid": "e2b05fcf-264b-410d-bc67-c62f0a1189c2",
+          "width": 0,
+          "x": 356,
+          "y": 540,
+          "zOrder": 33,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UIOver",
+          "name": "NewText5",
+          "persistentUuid": "2c3d2eef-c675-4add-9b83-f7ec3ce5ca0f",
+          "width": 0,
+          "x": 600,
+          "y": 542,
+          "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UIOver",
+          "name": "NewSprite6",
+          "persistentUuid": "b0f7a823-a96d-425c-b9bc-8e0820f56242",
+          "width": 0,
+          "x": 638,
+          "y": 505,
+          "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2052,7 +2112,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Reach the end while evading the guards to clear a level!\nClear levels to win!",
+          "string": "Reach the top while evading the guards to clear a level!\nClear levels to win!",
           "font": "assets\\MPLUS1p-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 20,
@@ -2075,7 +2135,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Reach the end while evading the guards to clear a level!\nClear levels to win!",
+            "text": "Reach the top while evading the guards to clear a level!\nClear levels to win!",
             "font": "assets\\MPLUS1p-Regular.ttf",
             "textAlignment": "left",
             "characterSize": 20,
@@ -2358,6 +2418,208 @@
               "width": 16
             }
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\guard.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 6
+                          },
+                          {
+                            "x": 29,
+                            "y": 6
+                          },
+                          {
+                            "x": 29,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText4",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "This is a guard\n",
+          "font": "assets\\MPLUS1p-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "This is a guard\n",
+            "font": "assets\\MPLUS1p-Regular.ttf",
+            "textAlignment": "center",
+            "characterSize": 20,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText5",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "This is you",
+          "font": "assets\\MPLUS1p-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "This is you",
+            "font": "assets\\MPLUS1p-Regular.ttf",
+            "textAlignment": "left",
+            "characterSize": 20,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite6",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\player.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 6
+                          },
+                          {
+                            "x": 29,
+                            "y": 6
+                          },
+                          {
+                            "x": 29,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2415,6 +2677,15 @@
             "objectName": "NewText3"
           },
           {
+            "objectName": "NewSprite5"
+          },
+          {
+            "objectName": "NewText4"
+          },
+          {
+            "objectName": "NewText5"
+          },
+          {
             "objectName": "Close_Dialog"
           },
           {
@@ -2434,6 +2705,9 @@
           },
           {
             "objectName": "NewResourceBar"
+          },
+          {
+            "objectName": "NewSprite6"
           }
         ]
       },
