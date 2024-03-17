@@ -629,6 +629,24 @@
         "name": "NewSprite",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3907,49 +3925,6 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "c"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "LevelNumber",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Level",
-                "Text",
-                "=",
-                "LevelNumber"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "VarScene"
               },
               "parameters": [
@@ -4876,6 +4851,52 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 80,
+          "layer": "",
+          "name": "NewText",
+          "persistentUuid": "1c4744a2-ed1f-4b5c-b6ca-86ac973e91cb",
+          "width": 590,
+          "x": 90,
+          "y": 179,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Subtitle",
+          "persistentUuid": "835014ea-3d85-4b62-8fc4-cb05216261bc",
+          "width": 0,
+          "x": 254,
+          "y": 160,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Title",
+          "persistentUuid": "6d92de78-0927-457c-af6c-bb170423ac83",
+          "width": 0,
+          "x": 131,
+          "y": 79,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -4883,17 +4904,17 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "NewText",
+          "name": "Subtitle",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Prison Escape",
+          "string": "A Frogger Re-implementation",
           "font": "assets\\Kenney Mini Square.ttf",
           "textAlignment": "left",
-          "characterSize": 80,
+          "characterSize": 20,
           "color": {
             "b": 255,
             "g": 255,
@@ -4913,10 +4934,10 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Prison Escape",
+            "text": "A Frogger Re-implementation",
             "font": "assets\\Kenney Mini Square.ttf",
             "textAlignment": "left",
-            "characterSize": 80,
+            "characterSize": 20,
             "color": "255;255;255"
           }
         },
@@ -5229,13 +5250,57 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Title",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Prison Escape",
+          "font": "assets\\Kenney Mini Square.ttf",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 5,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Prison Escape",
+            "font": "assets\\Kenney Mini Square.ttf",
+            "textAlignment": "left",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "NewText"
+            "objectName": "Subtitle"
+          },
+          {
+            "objectName": "Title"
           },
           {
             "objectName": "StartButton"
@@ -6084,7 +6149,7 @@
               "CurrentCharacter": ""
             }
           ],
-          "string": "Freedom. \nIt's been too long since I've tasted it. They thought they could keep me locked away, \nhidden behind bars, but they underestimated the strength of my will to break free.\nEvery day, in my cell, I fought against the injustice and lies that kept me trapped. \nAnd now, finally, I've brokenfree. My name still hasn't been cleared, but atleast\nI can reclaim my life and family. In a way justice has been served. ",
+          "string": "Freedom. \nIt's been too long since I've tasted it. They thought they could keep me locked away, \nhidden behind bars, but they underestimated the strength of my will to break free.\nEvery day, in my cell, I fought against the injustice and lies that kept me trapped. \nAnd now, finally, I've broken free. My name still hasn't been cleared, but atleast\nI can reclaim my life and family. In a way justice has been served. ",
           "font": "assets\\MPLUS1p-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 19,
@@ -6107,12 +6172,73 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Freedom. \nIt's been too long since I've tasted it. They thought they could keep me locked away, \nhidden behind bars, but they underestimated the strength of my will to break free.\nEvery day, in my cell, I fought against the injustice and lies that kept me trapped. \nAnd now, finally, I've brokenfree. My name still hasn't been cleared, but atleast\nI can reclaim my life and family. In a way justice has been served. ",
+            "text": "Freedom. \nIt's been too long since I've tasted it. They thought they could keep me locked away, \nhidden behind bars, but they underestimated the strength of my will to break free.\nEvery day, in my cell, I fought against the injustice and lies that kept me trapped. \nAnd now, finally, I've broken free. My name still hasn't been cleared, but atleast\nI can reclaim my life and family. In a way justice has been served. ",
             "font": "assets\\MPLUS1p-Regular.ttf",
             "textAlignment": "left",
             "characterSize": 19,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Tree",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 6
+                          },
+                          {
+                            "x": 51,
+                            "y": 6
+                          },
+                          {
+                            "x": 51,
+                            "y": 60
+                          },
+                          {
+                            "x": 19,
+                            "y": 60
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -6123,6 +6249,9 @@
           },
           {
             "objectName": "NewText"
+          },
+          {
+            "objectName": "Tree"
           }
         ]
       },
@@ -6187,6 +6316,42 @@
               "parameters": [
                 "",
                 "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AutoTyping::Text_AutoTyping::TypingFinished"
+              },
+              "parameters": [
+                "NewText",
+                "Text_AutoTyping",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Return"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Credits\"",
+                ""
               ]
             }
           ]
@@ -6694,6 +6859,225 @@
         {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Credits",
+      "name": "Credits",
+      "r": 0,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.875,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Title",
+          "persistentUuid": "5f6663dc-1fd2-4d4c-b330-68af1d1509db",
+          "width": 0,
+          "x": 289,
+          "y": 43,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 308,
+          "layer": "",
+          "name": "Text",
+          "persistentUuid": "850829af-ee87-4c3e-b1fe-065d886aa0a1",
+          "width": 673,
+          "x": 41,
+          "y": 137,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Title",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Credits",
+          "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Credits",
+            "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
+            "textAlignment": "left",
+            "characterSize": 50,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Text",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music - Danijel Zambo(Upbbeat)\n",
+          "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
+          "textAlignment": "left",
+          "characterSize": 25,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music - Danijel Zambo(Upbbeat)\n",
+            "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
+            "textAlignment": "left",
+            "characterSize": 25,
+            "color": "255;255;255"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Title"
+          },
+          {
+            "objectName": "Text"
+          }
+        ]
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
         },
         {
           "name": "Scale",
