@@ -5074,7 +5074,7 @@
           "persistentUuid": "8d08bfbf-c29a-48db-bdc0-5d954cdb5bc9",
           "width": 0,
           "x": 300,
-          "y": 250,
+          "y": 227,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -5089,7 +5089,7 @@
           "persistentUuid": "2f62610c-d0f9-4cd9-9393-a4f13251dffc",
           "width": 0,
           "x": 300,
-          "y": 350,
+          "y": 327,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -5104,7 +5104,7 @@
           "persistentUuid": "c3792563-0582-4ca3-bd31-fa86bf752c83",
           "width": 0,
           "x": 300,
-          "y": 450,
+          "y": 527,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -5168,6 +5168,21 @@
           "x": 131,
           "y": 79,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "CreditsButton",
+          "persistentUuid": "dccf0714-1001-49f7-8492-6e812a3c4d58",
+          "width": 0,
+          "x": 300,
+          "y": 427,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5565,6 +5580,89 @@
             "characterSize": 80,
             "color": "255;255;255"
           }
+        },
+        {
+          "assetStoreId": "d907b5df38595e6d3f128058fbb3dbd0861f86505cc6d7bf9859ddcc3eceeb1f",
+          "name": "CreditsButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 20,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_normal.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Credits",
+              "font": "assets\\Kenney Mini Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Credits",
+                "font": "assets\\Kenney Mini Square.ttf",
+                "textAlignment": "center",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_pressed.png",
+              "tiled": true,
+              "topMargin": 22,
+              "width": 192
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -5584,6 +5682,9 @@
           },
           {
             "objectName": "QuitButton"
+          },
+          {
+            "objectName": "CreditsButton"
           },
           {
             "objectName": "NewSprite"
@@ -5689,6 +5790,32 @@
                 "value": "Quit"
               },
               "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "CreditsButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Credits\"",
                 ""
               ]
             }
@@ -5854,7 +5981,7 @@
           "name": "WhiteSquareDecoratedButton",
           "persistentUuid": "abb6e709-e7fb-4867-83b9-d9c5829fa1de",
           "width": 0,
-          "x": 314,
+          "x": 300,
           "y": 476,
           "zOrder": 2,
           "numberProperties": [],
@@ -6746,7 +6873,7 @@
           "name": "RestartButton",
           "persistentUuid": "2a11afbe-7f9e-404a-9d61-d1b7029c00ae",
           "width": 0,
-          "x": 314,
+          "x": 300,
           "y": 360,
           "zOrder": 2,
           "numberProperties": [],
@@ -6761,7 +6888,7 @@
           "name": "QuitButton",
           "persistentUuid": "3be28a25-7267-49ea-8515-0d77adc82ec5",
           "width": 0,
-          "x": 314,
+          "x": 300,
           "y": 465,
           "zOrder": 3,
           "numberProperties": [],
@@ -6909,7 +7036,7 @@
               "italic": false,
               "smoothed": true,
               "underlined": false,
-              "string": "Quit",
+              "string": "Main Menu",
               "font": "assets\\Kenney Mini Square.ttf",
               "textAlignment": "center",
               "characterSize": 20,
@@ -6932,7 +7059,7 @@
                 "shadowOpacity": 127,
                 "smoothed": true,
                 "underlined": false,
-                "text": "Quit",
+                "text": "Main Menu",
                 "font": "assets\\Kenney Mini Square.ttf",
                 "textAlignment": "center",
                 "characterSize": 20,
@@ -7062,9 +7189,11 @@
           "actions": [
             {
               "type": {
-                "value": "Quit"
+                "value": "Scene"
               },
               "parameters": [
+                "",
+                "\"Start Menu\"",
                 ""
               ]
             }
@@ -7178,8 +7307,8 @@
           "name": "Title",
           "persistentUuid": "5f6663dc-1fd2-4d4c-b330-68af1d1509db",
           "width": 0,
-          "x": 289,
-          "y": 43,
+          "x": 336,
+          "y": 38,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -7193,10 +7322,25 @@
           "layer": "",
           "name": "Text",
           "persistentUuid": "850829af-ee87-4c3e-b1fe-065d886aa0a1",
-          "width": 673,
-          "x": 41,
-          "y": 137,
+          "width": 584,
+          "x": 130,
+          "y": 129,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "MainMenuButton",
+          "persistentUuid": "8e75eeac-49e4-4b30-9143-ebce828a3d91",
+          "width": 0,
+          "x": 300,
+          "y": 432,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7255,7 +7399,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music - Danijel Zambo(Upbbeat)\n",
+          "string": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music found on Upbbeat - Danijel Zambo\n",
           "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
           "textAlignment": "left",
           "characterSize": 25,
@@ -7278,11 +7422,94 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music - Danijel Zambo(Upbbeat)\n",
+            "text": "Game mechanics, design, graphics - Andy Newton\nTitle screen, dialogue system, sound fx- Naveen G.\nWriting, Game design - Adwaith Madadi\nBackground music found on Upbbeat - Danijel Zambo\n",
             "font": "349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
             "textAlignment": "left",
             "characterSize": 25,
             "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "f23eb31ad33dd63f1937c8745105316ca530c28513c64b68a665975503c852a6",
+          "name": "MainMenuButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 20,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_normal.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Main Menu",
+              "font": "assets\\Kenney Mini Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Main Menu",
+                "font": "assets\\Kenney Mini Square.ttf",
+                "textAlignment": "center",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "assets\\button_pressed.png",
+              "tiled": true,
+              "topMargin": 22,
+              "width": 192
+            }
           }
         }
       ],
@@ -7294,10 +7521,40 @@
           },
           {
             "objectName": "Text"
+          },
+          {
+            "objectName": "MainMenuButton"
           }
         ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "MainMenuButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Start Menu\"",
+                "no"
+              ]
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -7350,8 +7607,16 @@
           "type": "EffectCapability::EffectBehavior"
         },
         {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
         },
         {
           "name": "Scale",
